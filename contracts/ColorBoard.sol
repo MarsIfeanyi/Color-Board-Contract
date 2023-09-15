@@ -1,20 +1,18 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.19;
+pragma solidity >=0.7.0 <0.9.0;
 
 contract ColorBoard {
     mapping(uint => mapping(uint => uint)) boardCells;
 
     uint256 randomNonce = 0;
-    uint256 constant NUMBER_OF_COLORS=4
+    uint256 constant NUMBER_OF_COLORS = 4;
 
-    enum BoardColors{
-        White = 1;
-        Black;
-        Red;
-        Blue;
+    enum BoardColors {
+        White,
+        Black,
+        Red,
+        Blue
     }
-
-    
 
     function setBoardColors() public {
         for (uint256 x = 0; x < 7; x++) {
@@ -22,7 +20,11 @@ contract ColorBoard {
                 randomNonce++;
                 uint256 randomValue = uint256(
                     keccak256(
-                        abi.encodePacked(block.timestamp, msg.sender, randomNonce)
+                        abi.encodePacked(
+                            block.timestamp,
+                            msg.sender,
+                            randomNonce
+                        )
                     )
                 ) % NUMBER_OF_COLORS;
                 // Checks for even and odd numbers
