@@ -14,6 +14,7 @@ const ETH_MAINNET_RPC_URL = process.env.ETH_MAINNET_RPC_URL;
 const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY;
 
 const GOERLI_RPC_URL = process.env.GOERLI_RPC_URL;
+const MUMBAI_RPC_URL = process.env.MUMBAI_RPC_URL;
 
 const config: HardhatUserConfig = {
   defaultNetwork: "localhost",
@@ -21,7 +22,7 @@ const config: HardhatUserConfig = {
     hardhat: {
       forking: {
         // @ts-ignore
-        url: ETH_MAINNET_RPC_URL,
+        url: SEPOLIA_RPC_URL,
       },
     },
 
@@ -37,6 +38,13 @@ const config: HardhatUserConfig = {
       // @ts-ignore
       accounts: [PRIVATE_KEY],
       chainId: 5,
+    },
+
+    mumbai: {
+      url: MUMBAI_RPC_URL,
+      // @ts-ignore
+      accounts: [PRIVATE_KEY],
+      chainId: 80001,
     },
 
     base: {
