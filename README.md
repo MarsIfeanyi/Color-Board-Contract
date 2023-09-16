@@ -12,11 +12,8 @@ y axis = 3,4
 
 it should return the color in that cell
 
-You have 48 hours in total to finish this
-
-@here
-P.S Build a UI for your implemetation and get 20usdc
-
-https://github.com/MarsIfeanyi/Color-Board-Contract
-
 https://sepolia.etherscan.io/address/0xC1BA6C7bDa02477c8E42F0aCb037b78b60302103#code
+
+### Live URL:
+
+https://colorboard.vercel.app/
