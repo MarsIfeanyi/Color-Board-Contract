@@ -16,14 +16,14 @@ export default function Home() {
       </Head>
 
       <main>
-        <div className="  mx-14 font-bold mt-6 text-blue-600 ">
-          <h1>ColorBoard</h1>
+        <div className="  mx-14 font-bold mt-6 ">
+          <h1 className="text-[#7F56D9] text-2xl ">ColorBoard</h1>
           <div className="flex justify-end">
             <ConnectButton showBalance />
           </div>
 
-          <div className=" flex flex-row items-center justify-center gap-20">
-            <div>
+          <div className=" flex flex-col items-center justify-center gap-20">
+            <div className="mt-4">
               <SetBoardColors />
             </div>
             <div>
