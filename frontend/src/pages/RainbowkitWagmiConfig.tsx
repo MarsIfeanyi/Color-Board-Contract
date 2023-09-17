@@ -15,7 +15,7 @@ interface RainbowKitWagmiConfigsProps {
   children: React.ReactNode;
 }
 
-const alchemyApiKey = "Jqcdf8NmvPlt46xDNVTfHD7LTeirxXZ9" as string;
+const alchemyApiKey = process.env.NEXT_SEPOLIA_API_KEY as string;
 
 const { chains, publicClient } = configureChains(
   [sepolia],
