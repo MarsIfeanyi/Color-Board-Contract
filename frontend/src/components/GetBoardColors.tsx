@@ -43,11 +43,7 @@ const GetBoardColors = (props: Props) => {
 
   return (
     <div>
-      <h1 className=" mt-10 justify-center text-xl mx-auto items-center text-center text-[#7F56D9] font-medium ">
-        Get Colors on Board
-      </h1>
-
-      <section className="flex flex-col space-y-6 md:space-x-4 mx-auto items-center justify-center mt-4">
+      <section className="flex flex-col space-y-6 md:space-x-4 mx-auto items-center justify-center -mt-6">
         {/* Individual Container */}
         <div className="space-y-2 flex flex-col">
           <section className="flex flex-row">
@@ -57,10 +53,10 @@ const GetBoardColors = (props: Props) => {
             <input
               type="text"
               value={x_Value}
-              placeholder="Enter Address (account)"
+              placeholder="Enter X-Values"
               required
               onChange={(e) => setX_Value(e.target.value)}
-              className="rounded-lg p-2 border border-[#7F56D9] w-72"
+              className="outline-none text-sm w-40   rounded-lg p-2 border border-[#7F56D9]"
             />
           </section>
 
@@ -73,14 +69,14 @@ const GetBoardColors = (props: Props) => {
             <input
               type="text"
               value={y_Value}
-              placeholder="Enter Address (account)"
+              placeholder="Enter Y-Values"
               required
               onChange={(e) => setY_Value(e.target.value)}
-              className="rounded-lg p-2 border border-[#7F56D9] w-72"
+              className=" outline-none text-sm w-40  rounded-lg p-2 border border-[#7F56D9]  "
             />
           </div>
 
-          <span>
+          <span className=" ml-24">
             <button
               onClick={() => getBoardColorTx}
               type="submit"
@@ -94,7 +90,7 @@ const GetBoardColors = (props: Props) => {
 
       {isGetColor && <p className="mt-4">Getting Color</p>}
       {isGettingColor && (
-        <button className="mt-4">
+        <button className="mt-4 text-[#7F56D9]">
           Transaction: {getColorData && parseInt(getColorData?.toString())}
         </button>
       )}
