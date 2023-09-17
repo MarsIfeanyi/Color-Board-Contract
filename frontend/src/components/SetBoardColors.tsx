@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useContractWrite, UseContractWriteConfig } from "wagmi";
+import { useContractWrite } from "wagmi";
 import { CONTRACT_ABI, CONTRACT_ADDRESS } from "./constants/ColorBoardContract";
 
 type Props = {};
@@ -15,7 +15,7 @@ const SetBoardColors = (props: Props) => {
     isSuccess: isSettedBoardColor,
     error: setBoardColorError,
   } = useContractWrite({
-    address: "0xC1BA6C7bDa02477c8E42F0aCb037b78b60302103" as `0x ${string}`,
+    address: "0xC1BA6C7bDa02477c8E42F0aCb037b78b60302103",
     abi: CONTRACT_ABI,
     functionName: "setBoardColors",
   });
