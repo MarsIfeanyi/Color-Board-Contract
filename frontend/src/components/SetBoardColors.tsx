@@ -39,8 +39,10 @@ const SetBoardColors = (props: Props) => {
   };
 
   return (
-    <div>
-      <span onClick={(e) => setBoardColorTx(e)}>Set Colors</span>
+    <div className="bg-[#7F56D9] rounded-xl py-2 px-4 text-white ml-16">
+      <span onClick={(e) => setBoardColorTx(e)} className="cursor-pointer">
+        Set Colors
+      </span>
     </div>
   );
 };
